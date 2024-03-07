@@ -63,12 +63,12 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 	
 	@Test(priority = 3, groups = {"sanity"}, description="validate the error message, when user does not provide any credentials")
 	public void validateErrorMessageWithoutProvideAnyCredentials() throws Exception {
-		logger.info("execution started for the methiod verifyPresenceOfAllFieldsinTheLoginPage()");
+		logger.info("execution started for the methiod validateErrorMessageWithoutProvideAnyCredentials()");
 		FaceBookPageInstance = new FaceBookPage(driver);
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "errorMessage");
 		Assert.assertEquals(FaceBookPageInstance.validateErrorMessage(), expectedData.get("errorMessageText"), "error message is not matching, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.emailTextField(driver).isDisplayed(), "Email Text Field is not present in the current page, Please check manually");
-		logger.info("execution completed for the methiod verifyPresenceOfAllFieldsinTheLoginPage()");
+		logger.info("execution completed for the method validateErrorMessageWithoutProvideAnyCredentials()");
 	}
 	
 	@Test(priority = 4, groups = {"sanity"}, description="Enter Email or Phone No in Email or Phone No Text field and click on Login and validate Error Message")
@@ -87,7 +87,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 	
 	@Test(priority = 5, groups = {"sanity"}, description="Enter Password in password Text field and click on Login and validate Error Message")
 	public void validateErrorMessageWithoutProvideEmailOrPhoneNumber() throws Exception {
-		logger.info("execution started for the methiod validateErrorMessageWithoutProvidePassword()");
+		logger.info("execution started for the methiod validateErrorMessageWithoutProvideEmaild()");
 		FaceBookPageInstance = new FaceBookPage(driver);
 		
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
@@ -96,7 +96,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "errorMessage");
 		Assert.assertEquals(FaceBookPageInstance.validateErrorMessage(), expectedData.get("errorMessageText"), "error message is not matching, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.emailTextField(driver).isDisplayed(), "Email Text Field is not present in the current page, Please check manually");
-		logger.info("execution completed for the methiod validateErrorMessageWithoutProvidePassword()");
+		logger.info("execution completed for the methiod validateErrorMessageWithoutProvideEmail()");
 	}
 	
 	@Test(priority = 6, groups = {"sanity"}, description="Go Back To LogIn Page And Validate CreateNewAccount button Is Present or not")
@@ -109,7 +109,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 	}
 	
 	@Test(priority = 7, groups = {"sanity"}, description="Click on Create Account Button and Verify nevigate to the signUp page.")
-	public void click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field() throws Exception {
+	public void validate_navigate_to_sign_up_page() throws Exception {
 		logger.info("execution started for the methiod validateNavigateToTheSignUpPage()");
 		FaceBookPageInstance = new FaceBookPage(driver);
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "Sign_up_page");
@@ -121,7 +121,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 	
 	@Test(priority = 8, groups = {"sanity"}, description="verify first name,surname,Mobile Number email address,New password field are present in the signup page.")
 	public void VerifyAllFieldsArePresentInTheSignUpPage() throws Exception {
-		logger.info("execution started for the method ()");	
+		logger.info("execution started for the method VerifyAllFieldsArePresentInTheSignUpPage()");	
 		FaceBookPageInstance = new FaceBookPage(driver);
 		FaceBookPageInstance = new FaceBookPage(driver);
 		Assert.assertTrue(FaceBookPageInstance.verifyPresenceOfAllFieldsPresentInTheSignUpPage(), "Any of the elememt is not present, please check manually");
@@ -139,7 +139,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 		logger.info("execution completed for the methiod enterDataInFirstNameField()");
 	}
 	@Test(priority = 10, groups = {"sanity"}, description="Enter data (Read the data from Json File)in the surname,Mobile Number email address,New password field.")
-	public void Enter_data_in_some_Filed_in_the_SignUp_page() throws Exception {
+	public void Enter_data_in_some_field_in_the_SignUp_page() throws Exception {
 		logger.info("execution started for the method enterDataInSignUpPage()");	
 		FaceBookPageInstance = new FaceBookPage(driver);
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
