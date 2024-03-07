@@ -50,18 +50,7 @@ public class FaceBookPage extends StartupPage {
 	public String validateFacebookTitleOfLoginPage() throws Exception {
 		return null;
 	}
-	
-	/**
-	 * about this method facebookLoginForm() 
-	 * @param : Map<String, String> expectedData
-	 * @description : it is fill the forms and click on  login button  ,
-	 * @return : FaceBookPage
-	 * @author : Yaksha
-	 */
-	public FaceBookPage facebookLoginForm(Map<String, String> expectedData) throws Exception {
-		return null;
-	}
-	
+
 	/**
 	 * about this method verifyPresenceOfALlFields() 
 	 * @param : null
@@ -73,17 +62,18 @@ public class FaceBookPage extends StartupPage {
 		return null;
 	}
 	
+
 	/**
 	 * about this method validateErrorMessage() 
 	 * @param : null
-	 * @description : it is getting the error message and validate the error message ,
+	 * @description : it is getting the error message if login button clicked without passing email and password
 	 * @return : errorMessage as string type
 	 * @author : Yaksha
 	 */
 	public String validateErrorMessage() throws Exception {
 		return null;
 	}
-	
+
 	/**
 	 * about this method enterEmailIdOrPhoneNumber() 
 	 * @param : Map<String, String> expectedData
@@ -109,7 +99,7 @@ public class FaceBookPage extends StartupPage {
 	/**
 	 * about this method enterPassword() 
 	 * @param : null
-	 * @description : it is sending the password as per json expected data ,
+	 * @description : it is sending the only the password without providing email and click login ,
 	 * @return : null
 	 * @author : Yaksha
 	 */
@@ -140,17 +130,7 @@ public class FaceBookPage extends StartupPage {
 	}
 
 
-	/**
-	 * about this method enterDataInFirstNameField() 
-	 * @param : Map<String, String>
-	 * @description : Enter data in the first name text field ,
-	 * @return : String
-	 * @author : Yaksha
-	 */
-	public  String enterDataInFirstNameField( Map<String, String> expectedData) throws Exception {
-		return null;
-		
-	}
+	
 	/**
 	 * about this method verifyPresenceOfAllFieldsPresentInTheSignUpPage() 
 	 * @param : null
@@ -162,6 +142,17 @@ public class FaceBookPage extends StartupPage {
 		return null;
 }
 	
+/**
+	 * about this method enterDataInFirstNameField() 
+	 * @param : Map<String, String>
+	 * @description : Enter data in the first name text field ,
+	 * @return : String
+	 * @author : Yaksha
+	 */
+	public  String enterDataInFirstNameField( Map<String, String> expectedData) throws Exception {
+		return null;
+		
+	}
 	/**
 	 * about this method enterDataInSignUpPage() 
 	 * @param : Map<String, String>
